@@ -7,9 +7,8 @@ import {
   Switch
 } from 'react-router-dom';
 import styles from './App.css';
-import RGB from './components/RGB';
 
-function getRGB() {
+function RGB() {
   // 🚨 Get values for r, g, and b from params
   const { r, g, b } = useParams();
 
@@ -27,8 +26,10 @@ function getRGB() {
 function ScreenColor() {
   return <div>{/* Create Route Inside Switch */
   <Switch>
-    <Route>
-      <RGB />
+    <Route path='/rgb/:r/:g/:b'>
+      <div>
+        <RGB />
+      </div>
     </Route>
   </Switch>
   }</div>;
